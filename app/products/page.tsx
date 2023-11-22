@@ -1,28 +1,20 @@
-import { getProducts } from "@/api/products";
-import { columns } from "@/components/client/products/columns";
-import { DataTable } from "@/components/client/products/data-table";
-// import { useQuery } from "@tanstack/react-query";
-// async function getData(): Promise<any> {
-//   return [
-//     {
-//       id: "1",
-//       name: "products 1",
-//       price: 100,
-//     },
-//   ];
-// }
+import ProductsList from "@/components/client/products";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default async function Products() {
-  // const data = await getData();
-  // const { data } = useQuery({
-  //   queryKey: ["initial-users"],
-  //   queryFn: () => getProducts(),
-  // });
-
   return (
-    <div className="container mx-auto py-10 space-y-2">
-      <div className="text-xl font-bold">Table Products </div>
-      {/* <DataTable columns={columns} data={data} /> */}
+    <div className="container mx-auto py-8 ">
+      <div className="flex items-center  justify-between ">
+        <div className="text-3xl font-bold mb-1">Table Products</div>
+        <Link href="products/add">
+          {" "}
+          <Button variant="default" size="sm" type="submit">
+            Thêm
+          </Button>
+        </Link>
+      </div>
+      <ProductsList />
     </div>
   );
 }

@@ -79,3 +79,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+  .react-confirm-alert-body{
+    text-align: center !important;
+  }
+
+  .react-confirm-alert-button-group{
+    display: flex !important;
+    justify-content: center !important;
+  }

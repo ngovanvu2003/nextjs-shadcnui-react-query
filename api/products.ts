@@ -4,6 +4,10 @@ export const getProducts = () => {
   return connect_Api.get(`/products`);
 };
 
+export const getProductsById = (id: number) => {
+  return connect_Api.patch(`/products/${id}`);
+};
+
 export const addProducts = (product: any) => {
   return connect_Api.post(`/products`, product);
 };

@@ -15,7 +15,7 @@ export default function Home() {
               Get Started
             </Button>
           </Link>
-          <Link href="/products">
+          <Link href="https://github.com/ngovanvu2003/nextjs-shadcnui-react-query">
             <Button variant="default" size="sm">
               GitHub
             </Button>
